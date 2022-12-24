@@ -1,6 +1,9 @@
 ﻿//14 Напишите программу, которая принимает на вход число и 
 //проверяет, кратно ли оно одновременно 7 и 23.
 
+Console.WriteLine("Введите проверочное число");
+int firstNumber = int.Parse(Console.ReadLine()!);
+
 void numbers(int firstNumber)
 {
     int result = firstNumber % 7;
@@ -15,5 +18,5 @@ void numbers(int firstNumber)
         }
 }
 
-int firstNumber = int.Parse(Console.ReadLine()!);
+// int firstNumber = int.Parse(Console.ReadLine()!);
 numbers(firstNumber);
