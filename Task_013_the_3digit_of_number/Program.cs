@@ -1,6 +1,5 @@
 ﻿Console.WriteLine("Введите число");
 int x = int.Parse(Console.ReadLine()!);
-
 if (x < 100)
 {
     Console.Write("третьей цифры нет");
