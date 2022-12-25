@@ -15,12 +15,16 @@ int getUserValue(string message)
 
 double getDistanceFromCoordinates(int userAx, int userAy, int userBx, int userBy)
 {
-    double result = Math.Sqrt(Math.Pow((userAx - userBx)) + Math.Pow((userAy - userBy)));
+    double result = Math.Sqrt(Math.Pow((userAx - userBx), 2) + Math.Pow((userAy - userBy), 2));
     return result;
-    Console.WriteLine("Расстояние равно "getDistanceFromCoordinates);
+    
 }
-int userAx = getCoordinatesLength("Введите X");
-int userAy = getCoordinatesLength("Введите X");
+int userAx = getUserValue("Введите X");
+int userAy = getUserValue("Введите Y");
 
-int userBx = getCoordinatesLength("Введите X");
-int userBy = getCoordinatesLength("Введите X");
+int userBx = getUserValue("Введите X");
+int userBy = getUserValue("Введите Y");
+
+double distance = getDistanceFromCoordinates(userAx, userAy, userBx, userBy);
+Console.WriteLine($"Расстояние равно {distance}");
+
