@@ -1,6 +1,6 @@
 ﻿// Пишем программу калькулятор
 
-
+Console.Clear();
     double firstValue, secondValue;
     string action;
 

@@ -8,7 +8,7 @@ int getUserValue(string message)
     return result;
 }
 
-string getRengeFromQuarter(int quarter)
+ string getRengeFromQuarter(int quarter)
 {
     string result = $"Диапазон значения в {quarter} четверти ";
     switch (quarter)

@@ -32,7 +32,7 @@ int getQuorterNumber(int x, int y)
 
 int userX = getUserValue("Введите X");
 int userY = getUserValue("Введите Y");
-int quarter = getQuorterNumber(userX,userY);
+int quarter = getQuorterNumber(userX, userY);
 if (quarter > 0)
 {
     Console.WriteLine($"Точка [{userX},{userY}] находятся в {quarter} четверти");

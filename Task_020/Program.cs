@@ -27,4 +27,3 @@ int userBy = getUserValue("Введите Y");
 
 double distance = getDistanceFromCoordinates(userAx, userAy, userBx, userBy);
 Console.WriteLine($"Расстояние равно {distance}");
-
