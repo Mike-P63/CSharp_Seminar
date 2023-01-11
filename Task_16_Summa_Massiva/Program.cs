@@ -28,9 +28,9 @@ Console.WriteLine(sum);
 Console.Clear();
 
 
-int[] CreateArray()
+int[] CreateArray(int count)
 {
-    return new int[10];
+    return new int[count];
 }
 
 void Fill(int[] elements)
@@ -52,9 +52,9 @@ int GetSum(int[] array)
     int sum = 0;
     int position = 0;
 
-    while(position < size)
+    while (position < size)
     {
-        int  current = array[position];
+        int current = array[position];
         if (current >= 10 && current <= 99)
         {
             sum = sum + current;
@@ -72,14 +72,14 @@ string Print(int[] collection)
     while (index < size)
     {
         int current = collection[index];
-        output = output +$"{current}";
+        output = output + $"{current}";
         index = index + 1;
     }
 
     return output;
 }
 
-int[] arr = CreateArray();
+int[] arr = CreateArray(200);
 Fill(arr);
 int sum = GetSum(arr);
 Console.WriteLine(Print(arr));
