@@ -10,20 +10,25 @@ Console.Clear();
 
 int Massive(string message)
 {
-   Console.Write(message);
-return int.Parse(Console.ReadLine()!);
+    Console.Write(message);
+    return int.Parse(Console.ReadLine()!);
 }
 
 int ArrayLen = Massive("Введите длинну массива: ");
-int[] Array = new int[ArrayLen];
 
-for (int i = 0; i < Array.Length; i++)
+void Array8()
 {
-    Array[i] = new Random().Next(1, 8);
-    Console.Write(Array[i] + " ");
+    int[] Array = new int[ArrayLen];
+    for (int i = 0; i < Array.Length; i++)
+    {
+        Array[i] = new Random().Next(1, 8);
+        Console.Write(Array[i] + " ");
+    }
 }
+Array8();
 
-/* Заполнение массива с клавиатуры:
+
+/*Заполнение массива с клавиатуры:
 
 Console.Clear();
 
@@ -34,18 +39,23 @@ int Massive(string message)
 }
 
 int ArrayLen = Massive("Введите количество элементов массива:\t");
-int [] Array = new int[ArrayLen];
 
-for (int i = 0; i < Array.Length; i++)
+void Array8()
 {
-    Console.Write($"Введите элемент массива под индексом {i}:\t");
-    Array[i] = int.Parse(Console.ReadLine());
+    int[] Array = new int[ArrayLen];
+
+    for (int i = 0; i < Array.Length; i++)
+    {
+        Console.Write($"Введите элемент массива под индексом {i}:\t");
+        Array[i] = int.Parse(Console.ReadLine());
+    }
+
+    Console.WriteLine("\nВывод массива:");
+
+    for (int i = 0; i < Array.Length; i++)
+    {
+        Console.WriteLine(Array[i]);
+    }
 }
-
-Console.WriteLine("\nВывод массива:");
-
-for (int i = 0; i < Array.Length; i++)
-{
-    Console.WriteLine(Array[i]);
-} 
+Array8();
 */
