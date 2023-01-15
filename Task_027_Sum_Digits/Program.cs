@@ -17,7 +17,6 @@ int Chislo(string message)
 
 int number = Chislo("Введите число, состоящее из нескольких цифр: ");
 int len = NumberLen(number);
-SumNumbers(number, len);
 
 int NumberLen(int a)
 {
@@ -40,3 +39,5 @@ void SumNumbers(int n, int len)
     }
     Console.WriteLine(sum);
 }
+
+SumNumbers(number, len);
