@@ -16,18 +16,7 @@ int Chislo(string message)
 }
 
 int number = Chislo("Введите число, состоящее из нескольких цифр: ");
-int len = NumberLen(number);
-
-int NumberLen(int a)
-{
-    int index = 0;
-    while (a > 0)
-    {
-        a /= 10;
-        index++;
-    }
-    return index;
-}
+int len = number;
 
 void SumNumbers(int n, int len)
 {
