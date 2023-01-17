@@ -5,50 +5,49 @@
 
 Console.Clear();
 
-int size = 10;
+int size = 8;
 int[] numbers = new int[size];
-FillArrayRandomNumbers(numbers);
-PrintArray(numbers);
 
 void FillArrayRandomNumbers(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = new Random().Next(1, 999);
+        array[i] = new Random().Next(1, 300);
     }
 }
 
-
 void PrintArray(int[] array)
 {
+    Console.Write("[ ");
     for (int i = 0; i < array.Length; i++)
     {
         Console.Write(array[i] + " ");
     }
-    Console.WriteLine();
+    Console.WriteLine(" ]");
 }
+
+FillArrayRandomNumbers(numbers);
+PrintArray(numbers);
 
 int max = numbers[0];
 int min = numbers[0];
-
-void dif(int max, int min)
+int dif = 0;
+void Difference(int max, int min, int dif)
 {
     for (int i = 0; i < numbers.Length; i++)
-
-    if (numbers[i] > max)
     {
+        if (numbers[i] > max)
+        {
         max = numbers[i];
+        }
+        else if (numbers[i] < min)
+        {
+        min = numbers[i];
+        }
+        dif = max - min;
     }
-    else if (numbers[i] < min)
-    {
-        min = numbers[i];        
-    }
-     
 Console.WriteLine($"Минимальное число: {min}");
 Console.WriteLine($"Максимальное число: {max}");
-Console.Write($"Разница между максимальным и минимальным числами: {max - min}");
+Console.WriteLine($"Разница между максимальным и минимальным числами: {dif}");
 }
-dif(max, min);
-
-
-
+Difference(max,min,dif);
