@@ -44,7 +44,7 @@ void FindEven(int[] array)
         if (array[i] % 2 == 0)
         even += 1; 
     }
-    Console.WriteLine($"всего {numbers.Length} чисел, {even} из них чётные");
+    Console.WriteLine($"Всего {numbers.Length} чисел, {even} из них чётные");
 }
 
 FillArrayRandomNumbers(numbers);
