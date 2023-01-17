@@ -6,37 +6,35 @@
 
 Console.Clear();
 
-int size = 10;
+int size = 8;
 int[] numbers = new int[size];
-FillArrayRandomNumbers(numbers);
-PrintArray(numbers);
 int sumNumbersIndex = 0;
 
+void FillArrayRandomNumbers(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next(-100, 100);
+    }
+}
+void PrintArray(int[] array)
+{
+    Console.Write("[ ");
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine(" ]");
+}
 void Sum(int sumNumbersIndex)
 {
     for (int i = 1; i < numbers.Length; i += 2)
     {
         sumNumbersIndex += numbers[i];
     }
-    Console.WriteLine($"Сумма элементов на нечетных позициях = {sumNumbersIndex}");
+    Console.WriteLine($"Сумма элементов на нечетных позициях (индекс числа нечетный) = {sumNumbersIndex}");
 }
 
+FillArrayRandomNumbers(numbers);
+PrintArray(numbers);
 Sum(sumNumbersIndex);
-
-
-void FillArrayRandomNumbers(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        array[i] = new Random().Next(-100, 101);
-    }
-}
-
-void PrintArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write(array[i] + " ");
-    }
-    Console.WriteLine();
-}
