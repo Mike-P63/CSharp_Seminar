@@ -5,9 +5,7 @@
 [345, 897, 568, 234] -> 2
 */
 
-
 Console.Clear();
-
 int getUserData(string message)
 {
     Console.ForegroundColor = ConsoleColor.DarkCyan;
@@ -17,27 +15,26 @@ int getUserData(string message)
     return userData;
 }
 
+int size = getUserData($"Введите размер массива ");
+int[] numbers = new int[size];
+
 void FillArrayRandomNumbers(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = new Random().Next(100, 1000);
+        array[i] = new Random().Next(100, 999);
     }
 }
 
 void PrintArray(int[] array)
 {
+    Console.Write("[ ");
     for (int i = 0; i < array.Length; i++)
     {
         Console.Write(array[i] + " ");
     }
-    Console.WriteLine();
+    Console.WriteLine("]");
 }
-
-int size = getUserData($"Введите размер массива ");
-int[] numbers = new int[size];
-FillArrayRandomNumbers(numbers);
-PrintArray(numbers);
 
 void FindEven(int[] array)
 {
@@ -45,9 +42,12 @@ void FindEven(int[] array)
     for (int i = 0; i < array.Length; i++)
     {
         if (array[i] % 2 == 0)
-        even = even + 1; 
+        even += 1; 
     }
     Console.WriteLine($"всего {numbers.Length} чисел, {even} из них чётные");
 }
 
+FillArrayRandomNumbers(numbers);
+PrintArray(numbers);
 FindEven(numbers);
+
