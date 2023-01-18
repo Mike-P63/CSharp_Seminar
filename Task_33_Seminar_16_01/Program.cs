@@ -2,19 +2,11 @@
 присутствует ли заданное число в массиве.
 4; массив [6, 7, 19, 345, 3] -> нет
 -3; массив [6, 7, 19, 345, 3] -> да
-
-Задача 35: Задайте одномерный массив из 123 случайных чисел. 
-Найдите количество элементов массива, значения которых лежат в отрезке [10,99]. 
-Пример для массива из 5, а не 123 элементов. В своём решении сделайте для 123
-[5, 18, 123, 6, 2] -> 1
-[1, 2, 3, 6, 2] -> 0
-[10, 11, 12, 13, 14] -> 5
-
 */
-
+/*
 Console.Clear();
 
-/*
+
 
 int[] generateArray(int length)
 {
@@ -80,6 +72,7 @@ if (Index >=0)
 [6 7 3 6] -> 36 21
 */
 
+/*
 Console.Clear();
 
 int[] Fillarray(int length, int start, int end)
@@ -134,5 +127,54 @@ int[] array = Fillarray(number, -10, 10);
 printArray(array);
 int[] array2 = Newarray(array);
 printArray(array2);
+*/
 
+/*Задача 35: Задайте одномерный массив из 123 случайных чисел. 
+Найдите количество элементов массива, значения которых лежат в отрезке [10,99]. 
+Пример для массива из 5, а не 123 элементов. В своём решении сделайте для 123
+[5, 18, 123, 6, 2] -> 1
+[1, 2, 3, 6, 2] -> 0
+[10, 11, 12, 13, 14] -> 5
+*/
 
+Console.Clear();
+
+int[] generateArray(int length, int start, int end)
+{
+    int[] result = new int [length];
+    for (int i= 0; i < length; i++)
+    {
+        result[i] = new Random().Next(start, end);
+    }
+    return result;
+}
+void printArray(int[] array)
+{
+    Console.Write("[");
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] );
+        if (i < array.Length - 1)
+        {
+            Console.Write(", ");
+        }
+    }
+    Console.WriteLine("]");
+}
+int findNumberFromArray(int[] array)
+{
+    int sum = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] >= 10 && array[i] <= 99)
+        {
+            sum = sum + 1;
+        }
+    }
+    return sum;
+}
+
+int[] array = generateArray(123, -100, 123);
+printArray(array);
+int findNumber = findNumberFromArray(array);
+Console.WriteLine($"Количество элементов, лежащих в отрезке между 10 и 99 -> {findNumber}");
