@@ -9,11 +9,11 @@ Console.Clear();
 
 Console.WriteLine("Введите значение b1");
 double b1 = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Введите число k1");
+Console.WriteLine("Введите значение k1");
 double k1 = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите значение b2");
 double b2 = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Введите число k2");
+Console.WriteLine("Введите значение k2");
 double k2 = int.Parse(Console.ReadLine()!);
 
 double x = (-b2 + b1)/(-k1 + k2);
