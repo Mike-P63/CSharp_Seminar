@@ -19,8 +19,8 @@ int getUserData(string message)
     int userData = int.Parse(Console.ReadLine()!);
     return userData;
 }
-int lines = getUserData("Введите количество строк двумерного массива ");
-int columns = getUserData("Введите количество столбцов двумерного массива ");
+int lines = getUserData("Введите количество строк двумерного массива m = ");
+int columns = getUserData("Введите количество столбцов двумерного массива n = ");
 
 double[,] numbers = new double[lines, columns];
 
@@ -49,6 +49,8 @@ void PrintArray(double[,] array)
     }
 }
     FillArrayRandomNumbers(numbers);
+    Console.WriteLine();
     PrintArray(numbers);
+    Console.WriteLine();
 
 
