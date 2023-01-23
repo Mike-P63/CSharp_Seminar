@@ -50,12 +50,17 @@ void PrintArray(int[,] array)
     }
 }
 
+void FindNumberInArray(int[,] matrix)
+{
+    if (rows < matrix.GetLength(0) && columns < matrix.GetLength(1)) Console.WriteLine(matrix[rows, columns]);
+    else Console.WriteLine($"{rows} , {columns} -> такого числа в массиве нет");
+    Console.WriteLine();
+}
+
 
 FillArrayRandomNumbers(matrix);
 Console.WriteLine();
 PrintArray(matrix);
 Console.WriteLine();
+FindNumberInArray(matrix);
 
-if (rows < matrix.GetLength(0) && columns < matrix.GetLength(1)) Console.WriteLine(matrix[rows, columns]);
-else Console.WriteLine($"{rows} , {columns} -> такого числа в массиве нет");
-Console.WriteLine();
