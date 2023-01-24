@@ -24,6 +24,13 @@ int getUserData(string message)
 int rows = getUserData("Введите индекс строки для проверки нахождения числа в массиве ");
 int columns = getUserData("Введите индекс столбца для проверки нахождения числа в массиве ");
 
+void printInColor(string data)
+{
+    Console.ForegroundColor = ConsoleColor.Magenta;
+    Console.Write(data);
+    Console.ResetColor();
+}
+
 int[,] matrix = new int[5, 5];
 
 void FillArrayRandomNumbers(int[,] array)
@@ -39,14 +46,20 @@ void FillArrayRandomNumbers(int[,] array)
 
 void PrintArray(int[,] array)
 {
+    Console.Write("\t");
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+        printInColor(j + "\t");
+    }
+    Console.WriteLine();
     for (int i = 0; i < array.GetLength(0); i++)
     {
-
+        printInColor(i + "\t");
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write(array[i, j] + " ");
+            Console.Write(array[i, j] + "\t");
         }
-        Console.WriteLine(" ");
+        Console.WriteLine();
     }
 }
 
