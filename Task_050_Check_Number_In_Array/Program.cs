@@ -21,8 +21,6 @@ int getUserData(string message)
     int userData = int.Parse(Console.ReadLine()!);
     return userData;
 }
-int rows = getUserData("Введите индекс строки для проверки нахождения числа в массиве ");
-int columns = getUserData("Введите индекс столбца для проверки нахождения числа в массиве ");
 
 void printInColor(string data)
 {
@@ -63,17 +61,18 @@ void PrintArray(int[,] array)
     }
 }
 
+FillArrayRandomNumbers(matrix);
+Console.WriteLine();
+PrintArray(matrix);
+Console.WriteLine();
+int rows = getUserData("Введите индекс строки для проверки нахождения числа в массиве ");
+int columns = getUserData("Введите индекс столбца для проверки нахождения числа в массиве ");
+Console.WriteLine();
 void FindNumberInArray(int[,] matrix)
 {
     if (rows < matrix.GetLength(0) && columns < matrix.GetLength(1)) Console.WriteLine(matrix[rows, columns]);
     else Console.WriteLine($"{rows} , {columns} -> такого числа в массиве нет");
     Console.WriteLine();
 }
-
-
-FillArrayRandomNumbers(matrix);
-Console.WriteLine();
-PrintArray(matrix);
-Console.WriteLine();
 FindNumberInArray(matrix);
 
