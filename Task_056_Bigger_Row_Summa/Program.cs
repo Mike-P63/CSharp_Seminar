@@ -11,7 +11,6 @@
 Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
 */
 
-
 Console.Clear();
 
 void printInColor(string data)
@@ -68,6 +67,8 @@ void StringSum(int[,] array)
         Sum[i] = result;
     }
     PrintArray(Sum);
+    Console.WriteLine();       
+    Console.Write($"Минимальная сумма в строке -> {Sum.Min()}");
     Console.WriteLine();
     int minRow = 0;
     int minSumRow = 0;
@@ -87,8 +88,9 @@ void StringSum(int[,] array)
         }
         sumRow = 0;
     }
+    Console.WriteLine(); 
     Console.Write($"Индекс строки с минимальной суммой -> {minSumRow}");
-    Console.WriteLine();
+    Console.WriteLine();  
 }
 
 void PrintArray(double[] array)
