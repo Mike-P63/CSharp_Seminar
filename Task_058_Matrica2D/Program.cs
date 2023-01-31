@@ -19,24 +19,6 @@ int getUserData(string message)
     return userData;
 }
 
-int rows = getUserData("Введите количество строк матрицы: ");
-int columns = getUserData("Введите количество столбцов матрицы: ");
-int[,] array = new int[rows, columns];
-int[,] secondArray = new int[rows, columns];
-int[,] resultArray = new int[rows, columns];
-
-FillArrayRandomNumbers(array);
-PrintArray2D(array);
-
-Console.WriteLine();
-
-FillArrayRandomNumbers(secondArray);
-PrintArray2D(secondArray);
-
-Console.WriteLine();
-
-Matrice(array);
-
 void FillArrayRandomNumbers(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
@@ -61,6 +43,12 @@ void PrintArray2D(int[,] array)
     }
 }
 
+int rows = getUserData("Введите количество строк матрицы: ");
+int columns = getUserData("Введите количество столбцов матрицы: ");
+int[,] array = new int[rows, columns];
+int[,] secondArray = new int[rows, columns];
+int[,] resultArray = new int[rows, columns];
+
 void Matrice(int [,] array)
 {
 if (array.GetLength(0) != secondArray.GetLength(1))
@@ -82,6 +70,12 @@ for (int i = 0; i < array.GetLength(0); i++)
 PrintArray2D(resultArray);
 }
 
-
+FillArrayRandomNumbers(array);
+PrintArray2D(array);
+Console.WriteLine();
+FillArrayRandomNumbers(secondArray);
+PrintArray2D(secondArray);
+Console.WriteLine();
+Matrice(array);
 
 
