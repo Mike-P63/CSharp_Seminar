@@ -53,6 +53,17 @@ void print2DArray(int[,] array)
     Console.WriteLine();
 }
 
+void PrintArray(double[] array)
+{
+    Console.WriteLine($"Среднее арифметическое каждой строки -> ");
+    Console.WriteLine();
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ;  ");
+    }
+    Console.WriteLine();
+}
+
 void StringSum(int[,] array)
 {
     Console.WriteLine();
@@ -91,17 +102,6 @@ void StringSum(int[,] array)
     Console.WriteLine(); 
     Console.Write($"Индекс строки с минимальной суммой -> {minSumRow}");
     Console.WriteLine();  
-}
-
-void PrintArray(double[] array)
-{
-    Console.WriteLine($"Среднее арифметическое каждой строки -> ");
-    Console.WriteLine();
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write(array[i] + " ;  ");
-    }
-    Console.WriteLine();
 }
 
 Console.WriteLine();
